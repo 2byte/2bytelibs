@@ -1,0 +1,6 @@
+{
+  "name": "@2byte/bun-server",
+  "version": "0.1.0",
+  "exports": "./mod.ts",
+  "license": "MIT"
+}

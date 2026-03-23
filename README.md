@@ -1,0 +1,29 @@
+# @2byte — JSR packages
+
+Scoped packages published to [jsr.io/@2byte](https://jsr.io/@2byte).
+
+## Packages
+
+| Package | Description |
+|---|---|
+| [`@2byte/bun-server`](./packages/bun-server/) | Lightweight HTTP server wrapper for Bun |
+
+## Publishing
+
+```bash
+# Publish a package (run from the package directory)
+cd packages/bun-server
+bunx jsr publish
+```
+
+## Development
+
+Each package lives in `packages/<name>/` and follows the structure:
+
+```
+packages/<name>/
+  src/           ← source files
+  mod.ts         ← public entry point (re-exports)
+  jsr.json       ← JSR package config (name, version, exports)
+  README.md
+```
