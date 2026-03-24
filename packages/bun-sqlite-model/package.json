@@ -1,5 +1,5 @@
 {
-  "name": "@2byte/bun-server",
+  "name": "@2byte/bun-sqlite-model",
   "version": "0.1.0",
   "module": "./mod.ts"
 }

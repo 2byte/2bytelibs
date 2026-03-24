@@ -1,7 +1,7 @@
 import type { Database } from "bun:sqlite";
 
 declare global {
-  var db: Database;
+  var db: Database | undefined;
 }
 
 export abstract class Model {
