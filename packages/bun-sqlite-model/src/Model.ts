@@ -1,8 +1,6 @@
 import type { Database } from "bun:sqlite";
 
-declare global {
-  var db: Database | undefined;
-}
+type GlobalWithDb = typeof globalThis & { db?: Database };
 
 export abstract class Model {
   protected static db: Database;
@@ -14,8 +12,9 @@ export abstract class Model {
 
   public static resolveDb(): Database {
     if (this.db) return this.db;
-    if (globalThis.db) {
-      this.db = globalThis.db;
+    const g = globalThis as GlobalWithDb;
+    if (g.db) {
+      this.db = g.db;
       return this.db;
     }
     throw new Error("Database connection is not set.");
