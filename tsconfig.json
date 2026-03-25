@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "strict": true,
+    "types": ["bun-types"],
+    "allowImportingTsExtensions": true,
+    "noEmit": true,
+    "paths": {
+      "@2byte/artisan": ["./packages/artisan/mod.ts"],
+      "@2byte/bun-sqlite-model": ["./packages/bun-sqlite-model/mod.ts"],
+      "@2byte/bun-server": ["./packages/bun-server/mod.ts"]
+    }
+  },
+  "include": ["packages/**/*"]
+}

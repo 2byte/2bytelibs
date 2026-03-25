@@ -1,0 +1,9 @@
+{
+  "extends": "../../tsconfig.json",
+  "compilerOptions": {
+    "paths": {
+      "@2byte/artisan": ["../artisan/mod.ts"]
+    }
+  },
+  "include": ["src/**/*", "mod.ts"]
+}

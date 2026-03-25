@@ -25,6 +25,14 @@ export class Migration {
     this.initMigrationsTable();
   }
 
+  getDatabase(): Database {
+    return this.db;
+  }
+
+  getMigrationsPath(): string {
+    return this.migrationsPath;
+  }
+
   private initMigrationsTable(): void {
     this.db.run(`
       CREATE TABLE IF NOT EXISTS migrations (
