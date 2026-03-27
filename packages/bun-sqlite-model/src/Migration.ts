@@ -103,7 +103,7 @@ export class Migration {
       try {
         this.db.transaction(() => {
           // db.exec() handles multiple SQL statements in one call
-          this.db.exec(upSql);
+          this.db.run(upSql);
           this.db.query('INSERT INTO migrations (name, batch) VALUES (?, ?)').run(file.name, batch);
         })();
         console.log(`✅ Migrated:     ${file.id}_${file.name}`);

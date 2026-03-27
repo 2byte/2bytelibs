@@ -124,3 +124,32 @@ CREATE INDEX IF NOT EXISTS idx_users_email ON users (email);
 DROP TABLE IF EXISTS users;
 ```
 
+## Project bootstrap
+
+You can scaffold an `artisan.ts` entrypoint and initial project structure in one call.
+
+```ts
+import { bootstrapArtisanProject } from '@2byte/bun-sqlite-model';
+
+const result = bootstrapArtisanProject({
+  rootDir: process.cwd(),
+  dbPath: './database/db.sqlite3',
+  migrationsPath: './database/migrations',
+  modelsPath: './models',
+  artisanPath: './artisan.ts',
+  createExampleModel: true,
+  exampleModelName: 'Example',
+});
+
+console.log(result);
+```
+
+Generated files and directories:
+
+- `database/migrations/`
+- `database/db.sqlite3`
+- `models/Example.ts` (optional)
+- `artisan.ts`
+
+Set `force: true` to overwrite existing `artisan.ts` and example model files.
+

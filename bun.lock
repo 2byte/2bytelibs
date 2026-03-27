@@ -5,12 +5,15 @@
     "": {
       "name": "@2byte/libs",
       "devDependencies": {
-        "@types/bun": "^1.3.11",
+        "bun-types": "^1.3.11",
       },
     },
     "packages/artisan": {
       "name": "@2byte/artisan",
       "version": "0.1.0",
+      "bin": {
+        "2byte-artisan": "./src/cli.ts",
+      },
     },
     "packages/bun-server": {
       "name": "@2byte/bun-server",
@@ -33,8 +36,6 @@
     "@2byte/bun-server": ["@2byte/bun-server@workspace:packages/bun-server"],
 
     "@2byte/bun-sqlite-model": ["@2byte/bun-sqlite-model@workspace:packages/bun-sqlite-model"],
-
-    "@types/bun": ["@types/bun@1.3.11", "", { "dependencies": { "bun-types": "1.3.11" } }, "sha512-5vPne5QvtpjGpsGYXiFyycfpDF2ECyPcTSsFBMa0fraoxiQyMJ3SmuQIGhzPg2WJuWxVBoxWJ2kClYTcw/4fAg=="],
 
     "@types/node": ["@types/node@25.5.0", "", { "dependencies": { "undici-types": "~7.18.0" } }, "sha512-jp2P3tQMSxWugkCUKLRPVUpGaL5MVFwF8RDuSRztfwgN1wmqJeMSbKlnEtQqU8UrhTmzEmZdu2I6v2dpp7XIxw=="],
 

@@ -1,5 +1,8 @@
 {
   "name": "@2byte/artisan",
   "version": "0.1.0",
-  "module": "./mod.ts"
+  "module": "./mod.ts",
+  "bin": {
+    "2byte-artisan": "./src/cli.ts"
+  }
 }
