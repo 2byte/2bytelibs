@@ -13,6 +13,7 @@ export type RouteHandler = (req: Request, params?: Record<string, string>) => Re
 interface ServerOptions {
   port?: number;
   hostname?: string;
+  maxRequestBodySize?: number; // in bytes
 }
 
 export class BunServerWrapper {
@@ -24,7 +25,13 @@ export class BunServerWrapper {
     this.options = {
       port: options.port || 3000,
       hostname: options.hostname || 'localhost',
+      maxRequestBodySize: options.maxRequestBodySize || 128 * 1024 * 1024, // 128 MB
     };
+  }
+
+  public maxRequestBodySize(size: number): this {
+    this.options.maxRequestBodySize = size;
+    return this;
   }
 
   /**
@@ -76,6 +83,7 @@ export class BunServerWrapper {
     this.server = Bun.serve({
       port: this.options.port,
       hostname: this.options.hostname,
+      maxRequestBodySize: this.options.maxRequestBodySize, // in bytes
       fetch: async (req: Request, server) => {
         
         if (server.upgrade(req, { data: { unauthorized: true } })) {
