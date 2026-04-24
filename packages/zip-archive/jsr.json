@@ -1,0 +1,13 @@
+{
+  "name": "@2byte/zip-archive",
+  "version": "0.1.0",
+  "exports": "./mod.ts",
+  "license": "MIT",
+  "publish": {
+    "include": [
+      "README.md",
+      "mod.ts",
+      "src/**/*.ts"
+    ]
+  }
+}

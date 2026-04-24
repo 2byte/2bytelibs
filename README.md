@@ -9,6 +9,7 @@ Scoped packages published to [jsr.io/@2byte](https://jsr.io/@2byte).
 | [`@2byte/artisan`](./packages/artisan/) | Lightweight command runner with plugin support and project init CLI |
 | [`@2byte/bun-server`](./packages/bun-server/) | Lightweight HTTP server wrapper for Bun |
 | [`@2byte/bun-sqlite-model`](./packages/bun-sqlite-model/) | Abstract base model for SQLite via `bun:sqlite` |
+| [`@2byte/zip-archive`](./packages/zip-archive/) | Cross-platform directory archiving and extraction with ignore patterns |
 
 ## Publishing
 

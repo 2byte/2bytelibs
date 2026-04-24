@@ -10,7 +10,8 @@
     "paths": {
       "@2byte/artisan": ["./packages/artisan/mod.ts"],
       "@2byte/bun-sqlite-model": ["./packages/bun-sqlite-model/mod.ts"],
-      "@2byte/bun-server": ["./packages/bun-server/mod.ts"]
+      "@2byte/bun-server": ["./packages/bun-server/mod.ts"],
+      "@2byte/zip-archive": ["./packages/zip-archive/mod.ts"]
     }
   },
   "include": ["packages/**/*"]
